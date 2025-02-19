@@ -1,0 +1,11 @@
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\bin\Debug\net7.0\CommonLayer.deps.json
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\bin\Debug\net7.0\CommonLayer.dll
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\bin\Debug\net7.0\CommonLayer.pdb
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.AssemblyInfo.cs
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.dll
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\refint\CommonLayer.dll
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.pdb
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\ref\CommonLayer.dll

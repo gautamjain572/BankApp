@@ -1,0 +1,12 @@
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.csproj.AssemblyReference.cache
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.AssemblyInfo.cs
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\bin\Debug\net7.0\RepositoryLayer.deps.json
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\bin\Debug\net7.0\RepositoryLayer.dll
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\bin\Debug\net7.0\RepositoryLayer.pdb
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.dll
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\refint\RepositoryLayer.dll
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.pdb
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\ref\RepositoryLayer.dll
