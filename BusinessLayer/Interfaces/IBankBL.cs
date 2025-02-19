@@ -16,7 +16,10 @@ namespace BusinessLayer.Interfaces
 
         Task<Responce<object>> UpdateBank(BankDetails bankDetails);
 
+
         Task<Responce<List<AccountHoldersDetails>>> GetAccountHoldersDetails();
+
+        Task<Responce<object>> AddAccountHolderDetails(AccountHoldersDetails accountHoldersDetails);
 
     }
 }

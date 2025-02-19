@@ -38,10 +38,18 @@ public class BankAppCotroller : ControllerBase
         return responce;
     }
 
+
     [HttpGet("Get-AccountHolders-details")]
     public async Task<Responce<List<AccountHoldersDetails>>> GetAccountHoldersDetails()
     {
         Responce<List<AccountHoldersDetails>> responce = await _bankBL.GetAccountHoldersDetails();
+        return responce;
+    }
+
+    [HttpPost("Add-AccountHolders-details")]
+    public async Task<Responce<object>> AddAccountHoldersDetails(AccountHoldersDetails accountHoldersDetails)
+    {
+        Responce<object> responce = await _bankBL.AddAccountHolderDetails(accountHoldersDetails);
         return responce;
     }
 }
