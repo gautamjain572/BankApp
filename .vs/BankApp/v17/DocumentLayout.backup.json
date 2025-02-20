@@ -5,18 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F733486C-7238-42C8-8993-514B03CA3802}|BankApp\\BankApp.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\bankapp\\controllers\\bankappcotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F733486C-7238-42C8-8993-514B03CA3802}|BankApp\\BankApp.csproj|solutionrelative:bankapp\\controllers\\bankappcotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3546F7C8-AF11-4975-996B-B40468277052}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\businesslayer\\services\\bankbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3546F7C8-AF11-4975-996B-B40468277052}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\bankbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A7ECDC9-5DF1-4234-A9B3-6365A401FE40}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\repositorylayer\\interfaces\\ibankdatarl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A7ECDC9-5DF1-4234-A9B3-6365A401FE40}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\interfaces\\ibankdatarl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A7ECDC9-5DF1-4234-A9B3-6365A401FE40}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\repositorylayer\\databasemodels\\banksp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A7ECDC9-5DF1-4234-A9B3-6365A401FE40}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\databasemodels\\banksp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,48 +24,9 @@
               "RelativeDocumentMoniker": "BankApp\\Controllers\\BankAppCotroller.cs",
               "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BankApp\\Controllers\\BankAppCotroller.cs",
               "RelativeToolTip": "BankApp\\Controllers\\BankAppCotroller.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAowC0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAADAY2ZmZmYqwDwAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T11:44:42.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IBankDataRL.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\RepositoryLayer\\Interfaces\\IBankDataRL.cs",
-              "RelativeDocumentMoniker": "RepositoryLayer\\Interfaces\\IBankDataRL.cs",
-              "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\RepositoryLayer\\Interfaces\\IBankDataRL.cs",
-              "RelativeToolTip": "RepositoryLayer\\Interfaces\\IBankDataRL.cs",
-              "ViewState": "AgIAAAgAAAAwZmZmZmYkwBAAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T11:42:05.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BankBL.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BusinessLayer\\Services\\BankBL.cs",
-              "RelativeDocumentMoniker": "BusinessLayer\\Services\\BankBL.cs",
-              "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BusinessLayer\\Services\\BankBL.cs",
-              "RelativeToolTip": "BusinessLayer\\Services\\BankBL.cs",
-              "ViewState": "AgIAAEkAAACAyszMzCwwwHkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T11:37:30.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BankSP.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\RepositoryLayer\\DatabaseModels\\BankSP.cs",
-              "RelativeDocumentMoniker": "RepositoryLayer\\DatabaseModels\\BankSP.cs",
-              "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\RepositoryLayer\\DatabaseModels\\BankSP.cs",
-              "RelativeToolTip": "RepositoryLayer\\DatabaseModels\\BankSP.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T11:32:46.815Z",
+              "WhenOpened": "2025-02-20T10:57:42.088Z",
               "EditorCaption": ""
             }
           ]

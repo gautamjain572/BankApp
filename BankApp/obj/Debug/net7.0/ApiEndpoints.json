@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
+    "Method": "AddAccountHoldersDetails",
+    "RelativePath": "api/BankAppCotroller/Add-AccountHolders-details",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountHoldersDetails",
+        "Type": "CommonLayer.Models.AccountHoldersDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "AddBankDetails",
     "RelativePath": "api/BankAppCotroller/Add-Bank-details",
     "HttpMethod": "POST",
@@ -11,6 +37,42 @@
         "Name": "bankDetails",
         "Type": "CommonLayer.Models.BankDetails",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankApp.Controllers.BankAppCotroller",
+    "Method": "DepositAmount",
+    "RelativePath": "api/BankAppCotroller/Deposit-Amount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "accountHolderName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "depositAmount",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -67,6 +129,32 @@
   },
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
+    "Method": "UpdateAccountHoldersDetails",
+    "RelativePath": "api/BankAppCotroller/Update-AccountHolders-details",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountHoldersDetails",
+        "Type": "CommonLayer.Models.AccountHoldersDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "UpdateBankDetails",
     "RelativePath": "api/BankAppCotroller/Update-Bank-details",
     "HttpMethod": "PUT",
@@ -77,6 +165,47 @@
         "Name": "bankDetails",
         "Type": "CommonLayer.Models.BankDetails",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankApp.Controllers.BankAppCotroller",
+    "Method": "WithdrawAmount",
+    "RelativePath": "api/BankAppCotroller/Withdraw-Amount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "atmCardNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cvv",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "atmPin",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "withdrawalAmount",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [

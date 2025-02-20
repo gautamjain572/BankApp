@@ -79,3 +79,4 @@ C:\Users\DELL\Documents\.NET\BankApp\BankApp\bin\Debug\net7.0\RepositoryLayer.pd
 C:\Users\DELL\Documents\.NET\BankApp\BankApp\bin\Debug\net7.0\CommonLayer.dll
 C:\Users\DELL\Documents\.NET\BankApp\BankApp\bin\Debug\net7.0\CommonLayer.pdb
 C:\Users\DELL\Documents\.NET\BankApp\BankApp\obj\Debug\net7.0\BankApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\DELL\Documents\.NET\BankApp\BankApp\obj\Debug\net7.0\BankApp.sourcelink.json

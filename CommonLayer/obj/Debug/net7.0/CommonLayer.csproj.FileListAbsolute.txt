@@ -9,3 +9,4 @@ C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.dl
 C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\refint\CommonLayer.dll
 C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.pdb
 C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\ref\CommonLayer.dll
+C:\Users\DELL\Documents\.NET\BankApp\CommonLayer\obj\Debug\net7.0\CommonLayer.sourcelink.json

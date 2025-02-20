@@ -15,7 +15,7 @@
    "T4TemplatePath": null,
    "Tables": [
       {
-         "Name": "[dbo].[GetAllAccountHolders]",
+         "Name": "[dbo].[UpdateAccountHolderDetails]",
          "ObjectType": 1
       }
    ],

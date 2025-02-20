@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
+// SP Models
 namespace RepositoryLayer.DatabaseModels
 {
     public class BankSP
     {
+        // Bank Details
         public partial class GetAllBankDetailsResult
         {
             public int BankID { get; set; }
@@ -18,7 +15,7 @@ namespace RepositoryLayer.DatabaseModels
             public string BankAddress { get; set; }
             public string City { get; set; }
         }
-
+        // Account Holder Details
         public partial class GetAllAccountHoldersResult
         {
             public int AccountID { get; set; }

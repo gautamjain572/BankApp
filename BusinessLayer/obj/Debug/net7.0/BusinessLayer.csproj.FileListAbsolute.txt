@@ -15,3 +15,4 @@ C:\Users\DELL\Documents\.NET\BankApp\BusinessLayer\bin\Debug\net7.0\CommonLayer.
 C:\Users\DELL\Documents\.NET\BankApp\BusinessLayer\bin\Debug\net7.0\RepositoryLayer.pdb
 C:\Users\DELL\Documents\.NET\BankApp\BusinessLayer\obj\Debug\net7.0\BusinessLayer.csproj.AssemblyReference.cache
 C:\Users\DELL\Documents\.NET\BankApp\BusinessLayer\obj\Debug\net7.0\Business.EA331CBA.Up2Date
+C:\Users\DELL\Documents\.NET\BankApp\BusinessLayer\obj\Debug\net7.0\BusinessLayer.sourcelink.json

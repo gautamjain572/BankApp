@@ -3,19 +3,15 @@ using CommonLayer.Models;
 using CommonLayer.OutputResponce;
 using RepositoryLayer.Interfaces;
 using RepositoryLayer.ManageEFPowerTools;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+// Service BL
 namespace BusinessLayer.Services
 {
     public class BankBL : IBankBL
-
     {
         public IBankDataRL _bankDataRL;
 
+        // from Repository Layer
         public BankBL(IBankDataRL bankDataRL)
         {
             _bankDataRL = bankDataRL;
@@ -54,7 +50,6 @@ namespace BusinessLayer.Services
                 return responce;
             }
         }
-
         //Method to add bank details
         public async Task<Responce<object>> AddBank(BankDetails bankDetails)
         {
@@ -110,7 +105,6 @@ namespace BusinessLayer.Services
             }
             return responce;
         }
-
         //Method to update bank details
         public async Task<Responce<object>> UpdateBank(BankDetails bankDetails)
         {
@@ -169,7 +163,6 @@ namespace BusinessLayer.Services
             return responce;
         }
 
-
         // Method to get all account holders details
         public async Task<Responce<List<AccountHoldersDetails>>> GetAccountHoldersDetails()
         {
@@ -212,83 +205,69 @@ namespace BusinessLayer.Services
                 return responce;
             }
         }
-
         // Method to add account holder details
         public async Task<Responce<object>> AddAccountHolderDetails(AccountHoldersDetails accountHoldersDetails)
         {
             Responce<object> responce = new Responce<object>();
-
             try
             {
-                // Validate required fields (excluding AccountNumber as we will generate it)
+                // Validate required fields
                 if (string.IsNullOrWhiteSpace(accountHoldersDetails.AccountHolderName) ||
                     string.IsNullOrWhiteSpace(accountHoldersDetails.Gender) ||
                     accountHoldersDetails.BankID <= 0 ||
-                    accountHoldersDetails.Balance == null ||
-                    accountHoldersDetails.Balance < 2000 || // Minimum balance validation
                     string.IsNullOrWhiteSpace(accountHoldersDetails.PANCard) ||
                     string.IsNullOrWhiteSpace(accountHoldersDetails.AadharCard) ||
-                    string.IsNullOrWhiteSpace(accountHoldersDetails.ATMCardNumber) ||
-                    accountHoldersDetails.CVV == null ||
                     string.IsNullOrWhiteSpace(accountHoldersDetails.PhoneNumber) ||
                     string.IsNullOrWhiteSpace(accountHoldersDetails.Email) ||
                     string.IsNullOrWhiteSpace(accountHoldersDetails.Address))
                 {
                     responce.Suceess = false;
-                    responce.Message = "All required fields must be provided, and minimum balance should be 2000.";
+                    responce.Message = "All fields are required.";
                     return responce;
                 }
-
-                // Validate CVV (must be a 3-digit number)
-                if (accountHoldersDetails.CVV.HasValue && accountHoldersDetails.CVV.Value.ToString().Length != 3)
+                // CVV Validation - must be exactly 3 digits
+                if (accountHoldersDetails.CVV == null || accountHoldersDetails.CVV?.ToString().Length != 3)
                 {
                     responce.Suceess = false;
                     responce.Message = "CVV must be a 3-digit number.";
                     return responce;
                 }
-
-                // Validate Gender
-                if (!new List<string> { "Male", "Female", "Other" }.Contains(accountHoldersDetails.Gender))
+                // Set default ATM pin
+                accountHoldersDetails.ATMPin = "1234";
+                // Generate unique Account Number
+                accountHoldersDetails.AccountNumber = GenerateUniqueAccountNumber();
+                // Validate minimum balance
+                if (accountHoldersDetails.Balance < 2000)
                 {
                     responce.Suceess = false;
-                    responce.Message = "Invalid gender value. Allowed values: Male, Female, Other.";
+                    responce.Message = "Minimum balance should be 2000.";
                     return responce;
                 }
-
-                // Generate a unique account number
-                string newAccountNumber = await GenerateUniqueAccountNumber();
-
-                // Set default ATM PIN to "1234" if not provided
-                string defaultPin = "1234";
-
                 // Output parameters
                 var isAccountAdded = new OutputParameter<bool?>();
                 var accountAddedStatus = new OutputParameter<string>();
-
-                // Execute stored procedure
+                // Insert account holder details
                 var result = await _bankDataRL.InsertAccountHolderDetailsAsync(
                     accountHoldersDetails.AccountHolderName,
                     accountHoldersDetails.Gender,
-                    newAccountNumber, // Use generated account number
+                    accountHoldersDetails.AccountNumber,
                     accountHoldersDetails.BankID,
                     accountHoldersDetails.Balance,
                     accountHoldersDetails.PANCard,
                     accountHoldersDetails.AadharCard,
                     accountHoldersDetails.ATMCardNumber,
                     accountHoldersDetails.CVV,
-                    defaultPin, // Default pin set to "1234"
+                    accountHoldersDetails.ATMPin,
                     accountHoldersDetails.PhoneNumber,
                     accountHoldersDetails.Email,
                     accountHoldersDetails.Address,
                     isAccountAdded,
                     accountAddedStatus
                 );
-
-                // Check stored procedure execution result
                 if (isAccountAdded.Value == true)
                 {
                     responce.Suceess = true;
-                    responce.Message = accountAddedStatus.Value ?? "Account Holder Details Added Successfully";
+                    responce.Message = "Account Holder Details Added Successfully";
                     responce.Data = result;
                 }
                 else
@@ -304,25 +283,189 @@ namespace BusinessLayer.Services
                 responce.Message = "An error occurred: " + ex.Message;
                 responce.Data = null;
             }
+            return responce;
+        }
+        // Helper method to generate a unique account number
+        private string GenerateUniqueAccountNumber()
+        {
+            Random random = new Random();
+            return "ACC" + random.Next(100000000, 999999999).ToString(); // 9-digit random number prefixed with "ACC"
+        }
+        // Method to update account holder details
+        public async Task<Responce<object>> UpdateAccountHolderDetails(AccountHoldersDetails accountHoldersDetails)
+        {
+            Responce<object> responce = new Responce<object>();
 
+            try
+            {
+                // Validate required fields
+                if (accountHoldersDetails.AccountID <= 0 ||
+                    string.IsNullOrWhiteSpace(accountHoldersDetails.AccountHolderName) ||
+                    string.IsNullOrWhiteSpace(accountHoldersDetails.Gender) ||
+                    string.IsNullOrWhiteSpace(accountHoldersDetails.AccountNumber) ||
+                    accountHoldersDetails.BankID <= 0 ||
+                    string.IsNullOrWhiteSpace(accountHoldersDetails.PANCard) ||
+                    string.IsNullOrWhiteSpace(accountHoldersDetails.AadharCard) ||
+                    string.IsNullOrWhiteSpace(accountHoldersDetails.PhoneNumber) ||
+                    string.IsNullOrWhiteSpace(accountHoldersDetails.Email) ||
+                    string.IsNullOrWhiteSpace(accountHoldersDetails.Address))
+                {
+                    responce.Suceess = false;
+                    responce.Message = "All fields are required.";
+                    return responce;
+                }
+
+                // CVV Validation - must be exactly 3 digits
+                if (accountHoldersDetails.CVV == null || accountHoldersDetails.CVV?.ToString().Length != 3)
+                {
+                    responce.Suceess = false;
+                    responce.Message = "CVV must be a 3-digit number.";
+                    return responce;
+                }
+
+                // Output parameters
+                var isUpdateSuccessful = new OutputParameter<bool?>();
+                var updateStatusMessage = new OutputParameter<string>();
+
+                // Update account holder details
+                var result = await _bankDataRL.UpdateAccountHolderDetailsAsync(
+                    accountHoldersDetails.AccountID,
+                    accountHoldersDetails.AccountHolderName,
+                    accountHoldersDetails.Gender,
+                    accountHoldersDetails.AccountNumber,
+                    accountHoldersDetails.BankID,
+                    accountHoldersDetails.PANCard,
+                    accountHoldersDetails.AadharCard,
+                    accountHoldersDetails.ATMCardNumber,
+                    accountHoldersDetails.CVV,
+                    accountHoldersDetails.ATMPin,
+                    accountHoldersDetails.PhoneNumber,
+                    accountHoldersDetails.Email,
+                    accountHoldersDetails.Address,
+                    isUpdateSuccessful,
+                    updateStatusMessage
+                );
+
+                if (isUpdateSuccessful.Value == true)
+                {
+                    responce.Suceess = true;
+                    responce.Message = "Account Holder Details Updated Successfully";
+                    responce.Data = result;
+                }
+                else
+                {
+                    responce.Suceess = false;
+                    responce.Message = updateStatusMessage.Value ?? "Failed to update account holder details.";
+                    responce.Data = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                responce.Suceess = false;
+                responce.Message = "An error occurred: " + ex.Message;
+                responce.Data = null;
+            }
             return responce;
         }
 
-        // Helper method to generate a unique account number
-        private async Task<string> GenerateUniqueAccountNumber()
+        // Method to withdraw amount
+        public async Task<Responce<object>> WithdrawAmount(string atmCardNumber, int? cvv, string atmPin, decimal? withdrawalAmount)
         {
-            Random random = new Random();
-            string accountNumber;
-            bool exists;
+            Responce<object> responce = new Responce<object>();
 
-            do
+            try
             {
-                accountNumber = "ACC" + random.Next(100000000, 999999999).ToString(); // 9-digit random number prefixed with "ACC"
-                exists = await _bankDataRL.CheckIfAccountNumberExists(accountNumber);
-            } while (exists); // Ensure uniqueness by checking in the database
+                // Validate required fields
+                if (string.IsNullOrWhiteSpace(atmCardNumber) || cvv == null || string.IsNullOrWhiteSpace(atmPin) || withdrawalAmount == null || withdrawalAmount <= 0)
+                {
+                    responce.Suceess = false;
+                    responce.Message = "All fields are required and withdrawal amount must be greater than zero.";
+                    return responce;
+                }
 
-            return accountNumber;
+                // Output parameters
+                var isWithdrawalSuccessful = new OutputParameter<bool?>();
+                var withdrawalStatusMessage = new OutputParameter<string>();
+
+                // Withdraw amount
+                var result = await _bankDataRL.WithdrawAmountAsync(
+                    atmCardNumber,
+                    cvv,
+                    atmPin,
+                    withdrawalAmount,
+                    isWithdrawalSuccessful,
+                    withdrawalStatusMessage
+                );
+
+                if (isWithdrawalSuccessful.Value == true)
+                {
+                    responce.Suceess = true;
+                    responce.Message = "Amount Withdrawn Successfully";
+                    responce.Data = result;
+                }
+                else
+                {
+                    responce.Suceess = false;
+                    responce.Message = withdrawalStatusMessage.Value ?? "Failed to withdraw amount.";
+                    responce.Data = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                responce.Suceess = false;
+                responce.Message = "An error occurred: " + ex.Message;
+                responce.Data = null;
+            }
+            return responce;
         }
+        // Method to deposit amount
+        public async Task<Responce<object>> DepositAmount(string accountNumber, string accountHolderName, decimal? depositAmount)
+        {
+            Responce<object> responce = new Responce<object>();
 
+            try
+            {
+                // Validate required fields
+                if (string.IsNullOrWhiteSpace(accountNumber) || string.IsNullOrWhiteSpace(accountHolderName) || depositAmount == null || depositAmount <= 100)
+                {
+                    responce.Suceess = false;
+                    responce.Message = "All fields are required and deposit amount must be greater than 100.";
+                    return responce;
+                }
+
+                // Output parameters
+                var isDepositSuccessful = new OutputParameter<bool?>();
+                var depositStatusMessage = new OutputParameter<string>();
+
+                // Deposit amount
+                var result = await _bankDataRL.DepositAmountAsync(
+                    accountNumber,
+                    accountHolderName,
+                    depositAmount,
+                    isDepositSuccessful,
+                    depositStatusMessage
+                );
+
+                if (isDepositSuccessful.Value == true)
+                {
+                    responce.Suceess = true;
+                    responce.Message = "Amount Deposited Successfully";
+                    responce.Data = result;
+                }
+                else
+                {
+                    responce.Suceess = false;
+                    responce.Message = depositStatusMessage.Value ?? "Failed to deposit amount.";
+                    responce.Data = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                responce.Suceess = false;
+                responce.Message = "An error occurred: " + ex.Message;
+                responce.Data = null;
+            }
+            return responce;
+        }
     }
 }

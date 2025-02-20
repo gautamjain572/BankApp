@@ -10,3 +10,4 @@ C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\Repository
 C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\refint\RepositoryLayer.dll
 C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.pdb
 C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\ref\RepositoryLayer.dll
+C:\Users\DELL\Documents\.NET\BankApp\RepositoryLayer\obj\Debug\net7.0\RepositoryLayer.sourcelink.json
