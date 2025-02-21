@@ -19,21 +19,21 @@ public class BankAppCotroller : ControllerBase
     }
 
     // Bank details
-    [HttpGet("Get-Bank-details")]
+    [HttpGet("bank/Get-Bank-details")]
     public async Task<Responce<List<BankDetails>>> GetBankDetails()
     {
         Responce<List<BankDetails>> responce = await _bankBL.GetBankDetail();
         return responce;
     }
 
-    [HttpPost("Add-Bank-details")]
+    [HttpPost("bank/Add-Bank-details")]
     public async Task<Responce<object>> AddBankDetails(BankDetails bankDetails)
     {
         Responce<object> responce = await _bankBL.AddBank(bankDetails);
         return responce;
     }
 
-    [HttpPut("Update-Bank-details")]
+    [HttpPut("bank/Update-Bank-details")]
     public async Task<Responce<object>> UpdateBankDetails(BankDetails bankDetails)
     {
         Responce<object> responce = await _bankBL.UpdateBank(bankDetails);
@@ -41,21 +41,21 @@ public class BankAppCotroller : ControllerBase
     }
 
     // Account Holders details
-    [HttpGet("Get-AccountHolders-details")]
+    [HttpGet("Account/Get-AccountHolders-details")]
     public async Task<Responce<List<AccountHoldersDetails>>> GetAccountHoldersDetails()
     {
         Responce<List<AccountHoldersDetails>> responce = await _bankBL.GetAccountHoldersDetails();
         return responce;
     }
 
-    [HttpPost("Add-AccountHolders-details")]
+    [HttpPost("Account/Add-AccountHolders-details")]
     public async Task<Responce<object>> AddAccountHoldersDetails(AccountHoldersDetails accountHoldersDetails)
     {
         Responce<object> responce = await _bankBL.AddAccountHolderDetails(accountHoldersDetails);
         return responce;
     }
 
-    [HttpPut("Update-AccountHolders-details")]
+    [HttpPut("Account/Update-AccountHolders-details")]
     public async Task<Responce<object>> UpdateAccountHoldersDetails(AccountHoldersDetails accountHoldersDetails)
     {
         Responce<object> responce = await _bankBL.UpdateAccountHolderDetails(accountHoldersDetails);
@@ -63,14 +63,14 @@ public class BankAppCotroller : ControllerBase
     }
 
     // Withdraw and Deposit Amount
-    [HttpPost("Withdraw-Amount")]
+    [HttpPost("Account/Withdraw-Amount")]
     public async Task<Responce<object>> WithdrawAmount(string atmCardNumber, int? cvv, string atmPin, decimal? withdrawalAmount)
     {
         Responce<object> responce = await _bankBL.WithdrawAmount(atmCardNumber, cvv, atmPin, withdrawalAmount);
         return responce;
     }
 
-    [HttpPost("Deposit-Amount")]
+    [HttpPost("Account/Deposit-Amount")]
     public async Task<Responce<object>> DepositAmount(string accountNumber, string accountHolderName, decimal? depositAmount)
     {
         Responce<object> responce = await _bankBL.DepositAmount(accountNumber, accountHolderName, depositAmount);

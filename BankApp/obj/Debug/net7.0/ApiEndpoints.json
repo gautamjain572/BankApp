@@ -2,7 +2,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "AddAccountHoldersDetails",
-    "RelativePath": "api/BankAppCotroller/Add-AccountHolders-details",
+    "RelativePath": "api/BankAppCotroller/Account/Add-AccountHolders-details",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -27,34 +27,8 @@
   },
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
-    "Method": "AddBankDetails",
-    "RelativePath": "api/BankAppCotroller/Add-Bank-details",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "bankDetails",
-        "Type": "CommonLayer.Models.BankDetails",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "DepositAmount",
-    "RelativePath": "api/BankAppCotroller/Deposit-Amount",
+    "RelativePath": "api/BankAppCotroller/Account/Deposit-Amount",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -90,7 +64,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "GetAccountHoldersDetails",
-    "RelativePath": "api/BankAppCotroller/Get-AccountHolders-details",
+    "RelativePath": "api/BankAppCotroller/Account/Get-AccountHolders-details",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -109,28 +83,8 @@
   },
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
-    "Method": "GetBankDetails",
-    "RelativePath": "api/BankAppCotroller/Get-Bank-details",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Collections.Generic.List\u00601[[CommonLayer.Models.BankDetails, CommonLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "UpdateAccountHoldersDetails",
-    "RelativePath": "api/BankAppCotroller/Update-AccountHolders-details",
+    "RelativePath": "api/BankAppCotroller/Account/Update-AccountHolders-details",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -155,34 +109,8 @@
   },
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
-    "Method": "UpdateBankDetails",
-    "RelativePath": "api/BankAppCotroller/Update-Bank-details",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "bankDetails",
-        "Type": "CommonLayer.Models.BankDetails",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "WithdrawAmount",
-    "RelativePath": "api/BankAppCotroller/Withdraw-Amount",
+    "RelativePath": "api/BankAppCotroller/Account/Withdraw-Amount",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -206,6 +134,78 @@
         "Name": "withdrawalAmount",
         "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankApp.Controllers.BankAppCotroller",
+    "Method": "AddBankDetails",
+    "RelativePath": "api/BankAppCotroller/bank/Add-Bank-details",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bankDetails",
+        "Type": "CommonLayer.Models.BankDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankApp.Controllers.BankAppCotroller",
+    "Method": "GetBankDetails",
+    "RelativePath": "api/BankAppCotroller/bank/Get-Bank-details",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "CommonLayer.OutputResponce.Responce\u00601[[System.Collections.Generic.List\u00601[[CommonLayer.Models.BankDetails, CommonLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BankApp.Controllers.BankAppCotroller",
+    "Method": "UpdateBankDetails",
+    "RelativePath": "api/BankAppCotroller/bank/Update-Bank-details",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bankDetails",
+        "Type": "CommonLayer.Models.BankDetails",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
