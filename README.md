@@ -9,14 +9,13 @@ BankApp is a simple banking system that provides basic functionalities such as c
 - **Backend:** .NET 7 (ASP.NET Web API)
 - **Database:** SQL Server
 - **ORM:** Entity Framework Core
-- **Authentication:** JWT (if implemented)
 
 ## 🔹 Features
 
 - Create new bank accounts
 - Update account details
 - Retrieve bank and account details
-- Perform deposits, withdrawals, and transfers
+- Perform deposits, withdrawals
 - Secure and efficient database operations using stored procedures
 
 ## ⚙️ Setup and Installation
@@ -50,7 +49,7 @@ dotnet ef database update
 dotnet run
 ```
 
-The API will be available at `http://localhost:5000` (or another port if configured).
+The API will be available at `http://localhost:7220`
 
 ## 📂 Database Schema
 
@@ -84,41 +83,49 @@ The database contains two main tables:
 
 ## 🔧 Stored Procedures
 
-The project uses stored procedures for database operations:
+The project uses the following stored procedures for database operations:
 
+### **Bank Details**
 - `GetAllBankDetails` – Fetches all bank details.
-- `GetAccountByID` – Retrieves an account by ID.
-- `UpdateAccountDetails` – Updates account holder details.
-- `DepositAmount` – Increases account balance.
-- `WithdrawAmount` – Decreases account balance.
-- `TransferAmount` – Transfers funds between two accounts.
+- `InsertBankDetails` – Inserts a new bank record.
+- `UpdateBankDetails` – Updates an existing bank record.
+
+### **Account Holder Details**
+- `GetAllAccountHolders` – Retrieves all account holders.
+- `InsertAccountHolderDetails` – Inserts a new account holder.
+- `UpdateAccountHolderDetails` – Updates account holder details.
+
+### **Transactions**
+- `WithdrawAmount` – Processes a withdrawal request.
+- `DepositAmount` – Processes a deposit request.
 
 ## 📌 API Endpoints
 
 ### 1️⃣ **Bank API**
 
-| Method | Endpoint           | Description       |
-| ------ | ------------------ | ----------------- |
-| GET    | `/api/bank/getAll` | Get all banks     |
-| POST   | `/api/bank/create` | Create a new bank |
+| Method | Endpoint                                         | Description       |
+| ------ | -------------------------------------------------| ----------------- |
+| GET    | `/api/BankAppCotroller/bank/Get-Bank-details`    | Get all banks     |
+| POST   | `/api/BankAppCotroller/bank/Add-Bank-details`    | Create a new bank |
+| PUT    | `/api/BankAppCotroller/bank/Update-Bank-details` | Update bank info  |
 
 ### 2️⃣ **Account API**
 
-| Method | Endpoint                | Description               |
-| ------ | ----------------------- | ------------------------- |
-| GET    | `/api/account/get/{id}` | Get account details by ID |
-| POST   | `/api/account/create`   | Create a new account      |
-| PUT    | `/api/account/update`   | Update account details    |
-| PUT    | `/api/account/deposit`  | Deposit amount            |
-| PUT    | `/api/account/withdraw` | Withdraw amount           |
-| POST   | `/api/account/transfer` | Transfer funds            |
+| Method | Endpoint                                                      | Description               |
+| ------ | ------------------------------------------------------------- | ------------------------- |
+| GET    | `/api/BankAppCotroller/Account/Get-AccountHolders-details`    | Get all account details   |
+| POST   | `/api/BankAppCotroller/Account/Add-AccountHolders-details`    | Create a new account      |
+| PUT    | `/api/BankAppCotroller/Account/Update-AccountHolders-details` | Update account details    |
+| POST   | `/api/BankAppCotroller/Account/Withdraw-Amount`               | Deposit amount            |
+| POST   | `/api/BankAppCotroller/Account/Deposit-Amount`                | Withdraw amount           |
 
 ## 🚀 Future Enhancements
 
+- Add Remaning Balance API
 - Implement authentication (JWT-based login and user roles)
 - Add logging and exception handling
 - Improve API security with rate limiting
-- Introduce a frontend (React/Angular) for UI
+- Introduce a frontend (Angular) for UI
 
 ## 👨‍💻 Author
 
