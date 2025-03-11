@@ -2,7 +2,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "AddAccountHoldersDetails",
-    "RelativePath": "api/BankAppCotroller/Account/Add-AccountHolders-details",
+    "RelativePath": "api/Account/Add-AccountHolders-details",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "DepositAmount",
-    "RelativePath": "api/BankAppCotroller/Account/Deposit-Amount",
+    "RelativePath": "api/Account/Deposit-Amount",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -64,7 +64,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "GetAccountHoldersDetails",
-    "RelativePath": "api/BankAppCotroller/Account/Get-AccountHolders-details",
+    "RelativePath": "api/Account/Get-AccountHolders-details",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -84,7 +84,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "UpdateAccountHoldersDetails",
-    "RelativePath": "api/BankAppCotroller/Account/Update-AccountHolders-details",
+    "RelativePath": "api/Account/Update-AccountHolders-details",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -110,7 +110,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "WithdrawAmount",
-    "RelativePath": "api/BankAppCotroller/Account/Withdraw-Amount",
+    "RelativePath": "api/Account/Withdraw-Amount",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -151,7 +151,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "AddBankDetails",
-    "RelativePath": "api/BankAppCotroller/bank/Add-Bank-details",
+    "RelativePath": "api/bank/Add-Bank-details",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -177,7 +177,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "GetBankDetails",
-    "RelativePath": "api/BankAppCotroller/bank/Get-Bank-details",
+    "RelativePath": "api/bank/Get-Bank-details",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -197,7 +197,7 @@
   {
     "ContainingType": "BankApp.Controllers.BankAppCotroller",
     "Method": "UpdateBankDetails",
-    "RelativePath": "api/BankAppCotroller/bank/Update-Bank-details",
+    "RelativePath": "api/bank/Update-Bank-details",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

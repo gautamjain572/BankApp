@@ -13,7 +13,7 @@ namespace RepositoryLayer.Interfaces
 
         // account holder details
         Task<List<DatabaseModels.BankSP.GetAllAccountHoldersResult>> GetAllAccountHoldersAsync(OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
-        Task<int> InsertAccountHolderDetailsAsync(string AccountHolderName, string Gender, string AccountNumber, int? BankID, decimal? Balance, string PANCard, string AadharCard, string ATMCardNumber, int? CVV, string ATMPin, string PhoneNumber, string Email, string Address, OutputParameter<bool?> isAccountAdded, OutputParameter<string> accountAddedStatus, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
+        Task<int> InsertAccountHolderDetailsAsync(string AccountHolderName, string Gender, string AccountNumber, int? BankID, decimal? Balance, string PANCard, string AadharCard, string ATMCardNumber, int? CVV, string? ATMPin, string PhoneNumber, string Email, string Address, OutputParameter<bool?> isAccountAdded, OutputParameter<string> accountAddedStatus, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
         Task<int> UpdateAccountHolderDetailsAsync(int? AccountID, string AccountHolderName, string Gender, string AccountNumber, int? BankID, string PANCard, string AadharCard, string ATMCardNumber, int? CVV, string ATMPin, string PhoneNumber, string Email, string Address, OutputParameter<bool?> isUpdateSuccessful, OutputParameter<string> updateStatusMessage, OutputParameter<int> returnValue = null, CancellationToken cancellationToken = default);
 
         // withdrawal and deposit

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BankApp.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/")]
 public class BankAppCotroller : ControllerBase
 {
     // First

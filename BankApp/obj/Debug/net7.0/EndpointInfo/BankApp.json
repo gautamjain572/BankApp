@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/BankAppCotroller/bank/Get-Bank-details": {
+    "/api/bank/Get-Bank-details": {
       "get": {
         "tags": [
           "BankAppCotroller"
@@ -34,7 +34,7 @@
         }
       }
     },
-    "/api/BankAppCotroller/bank/Add-Bank-details": {
+    "/api/bank/Add-Bank-details": {
       "post": {
         "tags": [
           "BankAppCotroller"
@@ -82,7 +82,7 @@
         }
       }
     },
-    "/api/BankAppCotroller/bank/Update-Bank-details": {
+    "/api/bank/Update-Bank-details": {
       "put": {
         "tags": [
           "BankAppCotroller"
@@ -130,7 +130,7 @@
         }
       }
     },
-    "/api/BankAppCotroller/Account/Get-AccountHolders-details": {
+    "/api/Account/Get-AccountHolders-details": {
       "get": {
         "tags": [
           "BankAppCotroller"
@@ -159,7 +159,7 @@
         }
       }
     },
-    "/api/BankAppCotroller/Account/Add-AccountHolders-details": {
+    "/api/Account/Add-AccountHolders-details": {
       "post": {
         "tags": [
           "BankAppCotroller"
@@ -207,7 +207,7 @@
         }
       }
     },
-    "/api/BankAppCotroller/Account/Update-AccountHolders-details": {
+    "/api/Account/Update-AccountHolders-details": {
       "put": {
         "tags": [
           "BankAppCotroller"
@@ -255,7 +255,7 @@
         }
       }
     },
-    "/api/BankAppCotroller/Account/Withdraw-Amount": {
+    "/api/Account/Withdraw-Amount": {
       "post": {
         "tags": [
           "BankAppCotroller"
@@ -320,7 +320,7 @@
         }
       }
     },
-    "/api/BankAppCotroller/Account/Deposit-Amount": {
+    "/api/Account/Deposit-Amount": {
       "post": {
         "tags": [
           "BankAppCotroller"
