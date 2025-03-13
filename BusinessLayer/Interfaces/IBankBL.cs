@@ -17,7 +17,7 @@ namespace BusinessLayer.Interfaces
         Task<Responce<object>> UpdateAccountHolderDetails(AccountHoldersDetails accountHoldersDetails);
 
         // Withdraw and Deposit Amount Interfaces
-        Task<Responce<object>> WithdrawAmount(string atmCardNumber, int? cvv, string atmPin, decimal? withdrawalAmount);
-        Task<Responce<object>> DepositAmount(string accountNumber, string accountHolderName, decimal? depositAmount);
+        Task<Responce<object>> WithdrawAmount(WithdrawRequest withdrawRequest);
+        Task<Responce<object>> DepositAmount(DepositRequest depositRequest);
     }
 }

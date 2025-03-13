@@ -34,19 +34,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "accountNumber",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "accountHolderName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "depositAmount",
-        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
+        "Name": "depositRequest",
+        "Type": "CommonLayer.Models.DepositRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -116,24 +106,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "atmCardNumber",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "cvv",
-        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
-      },
-      {
-        "Name": "atmPin",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "withdrawalAmount",
-        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "IsRequired": false
+        "Name": "withdrawRequest",
+        "Type": "CommonLayer.Models.WithdrawRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [

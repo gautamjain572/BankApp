@@ -260,42 +260,25 @@
         "tags": [
           "BankAppCotroller"
         ],
-        "parameters": [
-          {
-            "name": "atmCardNumber",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "cvv",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "atmPin",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "withdrawalAmount",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "number",
-              "format": "double"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WithdrawRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WithdrawRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/WithdrawRequest"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -325,33 +308,25 @@
         "tags": [
           "BankAppCotroller"
         ],
-        "parameters": [
-          {
-            "name": "accountNumber",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "accountHolderName",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "depositAmount",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "number",
-              "format": "double"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepositRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepositRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepositRequest"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -400,7 +375,8 @@
           },
           "bankID": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "balance": {
             "type": "number",
@@ -473,7 +449,8 @@
         "properties": {
           "bankID": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "bankName": {
             "type": "string",
@@ -518,6 +495,25 @@
         },
         "additionalProperties": false
       },
+      "DepositRequest": {
+        "type": "object",
+        "properties": {
+          "accountNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "accountHolderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "depositAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ObjectResponce": {
         "type": "object",
         "properties": {
@@ -529,6 +525,30 @@
             "nullable": true
           },
           "data": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WithdrawRequest": {
+        "type": "object",
+        "properties": {
+          "atmCardNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "cvv": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "atmPin": {
+            "type": "string",
+            "nullable": true
+          },
+          "withdrawalAmount": {
+            "type": "number",
+            "format": "double",
             "nullable": true
           }
         },

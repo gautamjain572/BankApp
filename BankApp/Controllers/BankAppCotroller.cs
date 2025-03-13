@@ -64,16 +64,16 @@ public class BankAppCotroller : ControllerBase
 
     // Withdraw and Deposit Amount
     [HttpPost("Account/Withdraw-Amount")]
-    public async Task<Responce<object>> WithdrawAmount(string atmCardNumber, int? cvv, string atmPin, decimal? withdrawalAmount)
+    public async Task<Responce<object>> WithdrawAmount(WithdrawRequest withdrawRequest)
     {
-        Responce<object> responce = await _bankBL.WithdrawAmount(atmCardNumber, cvv, atmPin, withdrawalAmount);
+        Responce<object> responce = await _bankBL.WithdrawAmount(withdrawRequest);
         return responce;
     }
 
     [HttpPost("Account/Deposit-Amount")]
-    public async Task<Responce<object>> DepositAmount(string accountNumber, string accountHolderName, decimal? depositAmount)
+    public async Task<Responce<object>> DepositAmount(DepositRequest depositRequest)
     {
-        Responce<object> responce = await _bankBL.DepositAmount(accountNumber, accountHolderName, depositAmount);
+        Responce<object> responce = await _bankBL.DepositAmount(depositRequest);
         return responce;
     }
 

@@ -370,14 +370,14 @@ namespace BusinessLayer.Services
         }
 
         // Method to withdraw amount
-        public async Task<Responce<object>> WithdrawAmount(string atmCardNumber, int? cvv, string atmPin, decimal? withdrawalAmount)
+        public async Task<Responce<object>> WithdrawAmount(WithdrawRequest withdrawRequest)
         {
             Responce<object> responce = new Responce<object>();
 
             try
             {
                 // Validate required fields
-                if (string.IsNullOrWhiteSpace(atmCardNumber) || cvv == null || string.IsNullOrWhiteSpace(atmPin) || withdrawalAmount == null || withdrawalAmount <= 0)
+                if (string.IsNullOrWhiteSpace(withdrawRequest.atmCardNumber) || withdrawRequest.cvv == null || string.IsNullOrWhiteSpace(withdrawRequest.atmPin) || withdrawRequest.withdrawalAmount == null || withdrawRequest.withdrawalAmount <= 0)
                 {
                     responce.Suceess = false;
                     responce.Message = "All fields are required and withdrawal amount must be greater than zero.";
@@ -390,10 +390,10 @@ namespace BusinessLayer.Services
 
                 // Withdraw amount
                 var result = await _bankDataRL.WithdrawAmountAsync(
-                    atmCardNumber,
-                    cvv,
-                    atmPin,
-                    withdrawalAmount,
+                    withdrawRequest.atmCardNumber,
+                    withdrawRequest.cvv,
+                    withdrawRequest.atmPin,
+                    withdrawRequest.withdrawalAmount,
                     isWithdrawalSuccessful,
                     withdrawalStatusMessage
                 );
@@ -420,14 +420,14 @@ namespace BusinessLayer.Services
             return responce;
         }
         // Method to deposit amount
-        public async Task<Responce<object>> DepositAmount(string accountNumber, string accountHolderName, decimal? depositAmount)
+        public async Task<Responce<object>> DepositAmount(DepositRequest depositRequest)
         {
             Responce<object> responce = new Responce<object>();
 
             try
             {
                 // Validate required fields
-                if (string.IsNullOrWhiteSpace(accountNumber) || string.IsNullOrWhiteSpace(accountHolderName) || depositAmount == null || depositAmount <= 100)
+                if (string.IsNullOrWhiteSpace(depositRequest.accountNumber) || string.IsNullOrWhiteSpace(depositRequest.accountHolderName) || depositRequest.depositAmount == null || depositRequest.depositAmount <= 100)
                 {
                     responce.Suceess = false;
                     responce.Message = "All fields are required and deposit amount must be greater than 100.";
@@ -440,9 +440,9 @@ namespace BusinessLayer.Services
 
                 // Deposit amount
                 var result = await _bankDataRL.DepositAmountAsync(
-                    accountNumber,
-                    accountHolderName,
-                    depositAmount,
+                    depositRequest.accountNumber,
+                    depositRequest.accountHolderName,
+                    depositRequest.depositAmount,
                     isDepositSuccessful,
                     depositStatusMessage
                 );

@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C21C43B2-1EB3-4B30-AD9B-75526F90D77C}|CommonLayer\\CommonLayer.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\commonlayer\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C21C43B2-1EB3-4B30-AD9B-75526F90D77C}|CommonLayer\\CommonLayer.csproj|solutionrelative:commonlayer\\models\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F733486C-7238-42C8-8993-514B03CA3802}|BankApp\\BankApp.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\bankapp\\controllers\\bankappcotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F733486C-7238-42C8-8993-514B03CA3802}|BankApp\\BankApp.csproj|solutionrelative:bankapp\\controllers\\bankappcotroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F733486C-7238-42C8-8993-514B03CA3802}|BankApp\\BankApp.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\bankapp\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F733486C-7238-42C8-8993-514B03CA3802}|BankApp\\BankApp.csproj|solutionrelative:bankapp\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3546F7C8-AF11-4975-996B-B40468277052}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\businesslayer\\services\\bankbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3546F7C8-AF11-4975-996B-B40468277052}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\services\\bankbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3546F7C8-AF11-4975-996B-B40468277052}|BusinessLayer\\BusinessLayer.csproj|c:\\users\\dell\\documents\\.net\\bankapp\\businesslayer\\interfaces\\ibankbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3546F7C8-AF11-4975-996B-B40468277052}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\interfaces\\ibankbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BankApp\\Startup.cs",
-              "RelativeDocumentMoniker": "BankApp\\Startup.cs",
-              "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BankApp\\Startup.cs",
-              "RelativeToolTip": "BankApp\\Startup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BankBL.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BusinessLayer\\Services\\BankBL.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Services\\BankBL.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BusinessLayer\\Services\\BankBL.cs",
+              "RelativeToolTip": "BusinessLayer\\Services\\BankBL.cs",
+              "ViewState": "AgIAAD0BAAAAhJmZmRkqwFUBAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T08:53:02.339Z",
+              "WhenOpened": "2025-03-13T10:26:40.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "IBankBL.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BusinessLayer\\Interfaces\\IBankBL.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\Interfaces\\IBankBL.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BusinessLayer\\Interfaces\\IBankBL.cs",
+              "RelativeToolTip": "BusinessLayer\\Interfaces\\IBankBL.cs",
+              "ViewState": "AgIAAA4AAAAAMzMzMzMDwBMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T10:25:48.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BankAppCotroller.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BankApp\\Controllers\\BankAppCotroller.cs",
               "RelativeDocumentMoniker": "BankApp\\Controllers\\BankAppCotroller.cs",
               "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\BankApp\\Controllers\\BankAppCotroller.cs",
               "RelativeToolTip": "BankApp\\Controllers\\BankAppCotroller.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAawB0AAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAYmZmZmb2v0EAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T10:41:21.025Z",
+              "WhenOpened": "2025-03-12T10:30:05.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Models.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\CommonLayer\\Models\\Models.cs",
+              "RelativeDocumentMoniker": "CommonLayer\\Models\\Models.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\.NET\\BankApp\\CommonLayer\\Models\\Models.cs",
+              "RelativeToolTip": "CommonLayer\\Models\\Models.cs",
+              "ViewState": "AgIAAB8AAACAUmZmZmb2vxwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T10:12:17.315Z",
               "EditorCaption": ""
             }
           ]
